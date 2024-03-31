@@ -2,6 +2,8 @@ import { createClient } from "@/prismicio";
 import clsx from "clsx";
 import type { Metadata } from "next";
 import { Nunito, Nunito_Sans } from "next/font/google";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 import "./globals.css";
 
 const nunito = Nunito({
@@ -18,12 +20,12 @@ const nunitoSans = Nunito_Sans({
 
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient()
-  const page = await client.getSingle("settings")
+  const settings = await client.getSingle("settings")
   return {
-    title: page.data.site_title || "flowrise fallback",
-    description : page.data.meta_description || "flowrise description fallback",
+    title: settings.data.site_title || "flowrise fallback",
+    description :settings.data.meta_description || "flowrise description fallback",
     openGraph: {
-      images: [page.data.og_image.url || ""],
+      images: [settings.data.og_image.url || ""],
     },
   }
 }
@@ -36,9 +38,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={clsx(nunito.variable, nunitoSans.variable)}>
       <body>
-        <header>Header</header>
+        <Header />
         {children}
-        <footer>Footer</footer>
+        <Footer />
       </body>
     </html>
   );
