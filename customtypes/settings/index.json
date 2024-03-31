@@ -1,5 +1,5 @@
 {
-  "format": "page",
+  "format": "custom",
   "id": "settings",
   "label": "Settings",
   "repeatable": false,
@@ -39,6 +39,7 @@
               "config": {
                 "label": "Link",
                 "placeholder": "",
+                "allowTargetBlank": false,
                 "select": null
               }
             },
@@ -50,13 +51,6 @@
               }
             }
           }
-        }
-      },
-      "slices": {
-        "type": "Slices",
-        "fieldset": "Slice Zone",
-        "config": {
-          "choices": {}
         }
       }
     }
