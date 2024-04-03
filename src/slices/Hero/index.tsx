@@ -1,9 +1,10 @@
-import Bounded from "@/app/components/Bounded";
-import Button from "@/app/components/Button";
-import Heading from "@/app/components/Heading";
 import { Content } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import { JSXMapSerializer, PrismicRichText, SliceComponentProps } from "@prismicio/react";
+
+import Bounded from "@/app/components/Bounded";
+import Button from "@/app/components/Button";
+import Heading from "@/app/components/Heading";
 
 const components: JSXMapSerializer = {
   heading1: ({children})=>(

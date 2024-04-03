@@ -1,8 +1,9 @@
-import Bounded from "@/app/components/Bounded";
-import Heading from "@/app/components/Heading";
 import { Content } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import { JSXMapSerializer, PrismicRichText, SliceComponentProps } from "@prismicio/react";
+
+import Bounded from "@/app/components/Bounded";
+import Heading from "@/app/components/Heading";
 import clsx from "clsx";
 
 const components: JSXMapSerializer = {
