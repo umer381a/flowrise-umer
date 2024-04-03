@@ -8,12 +8,12 @@ import clsx from "clsx";
 
 const components: JSXMapSerializer = {
   heading2: ({children})=>(
-    <Heading as="h2" size="lg" className="">
+    <Heading as="h2" size="sm" className="max-w-xs">
       {children}
     </Heading>
     ),
   paragraph : ({children}) => (
-    <p className="max-w-md text-lg font-body text-slate-600">{children}</p>
+    <p className="max-w-64 text-lg font-body text-slate-600">{children}</p>
   )
 }
 
